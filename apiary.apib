@@ -70,10 +70,56 @@ Use this endpoint to generate the main config.json to drop in your jsons folder.
   "programs":"..."
 }
 
-# *WIP* CREATE version
+# WIP CREATE version
 
 Use this endpoint to create a new version
 
-## *WIP* create version [/create/version]
+## WIP create version [/create/version]
 
 ### create version [POST]
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/1
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2014-11-11T08:40:51.620Z",
+                "url": "/questions/1",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "url": "/questions/1/choices/1",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "url": "/questions/1/choices/2",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "url": "/questions/1/choices/3",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "url": "/questions/1/choices/4",
+                        "votes": 0
+                    }
+                ]
+            }
+
