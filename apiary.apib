@@ -36,7 +36,7 @@ The steps are :
 * Create a pull request to `central/src-develop`
 
 
-# GET config
+# config
 
 Use this endpoint to generate the main config.json to drop in your jsons folder.
 
@@ -70,56 +70,49 @@ Use this endpoint to generate the main config.json to drop in your jsons folder.
   "programs":"..."
 }
 
-# WIP CREATE version
 
-Use this endpoint to create a new version
+# WIP create config
+
+Use this endpoint to create new version.
 
 ## WIP create version [/create/version]
 
-### create version [POST]
+### WIP create [GET]
 
-+ Request (application/json)
++ Response 200 (application/json)
+  {
+    "name": "datacore",
+    "blackstatusbar": true,
+    "dashboard": false,
+    "tabs": [
+    "stream",
+    "me",
+    "explore",
+    "rewards"
+    ],
+    "defaulttab": "stream",
+    "menu": [
+    "home_stream",
+    "notifications",
+    "news_feed",
+    "program_catalog",
+    "settings",
+    "directory",
+    "store",
+    "help"
+    ],
+    "menu_style": "dark",
+    "logo": "logo-datacore.png",
+    "rewards_center": null,
+    "web": false,
+    "background_web": null,
+    "displayed_name": "Life Central",
+    "place": 1,
+    "video_name": null,
+    "has_terms": null,
+    "has_phone": null,
+    "on_boarding": null,
+    "personal_assessment": true
+  }
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
-
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /questions/1
-
-    + Body
-
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2014-11-11T08:40:51.620Z",
-                "url": "/questions/1",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "url": "/questions/1/choices/1",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "url": "/questions/1/choices/2",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "url": "/questions/1/choices/3",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "url": "/questions/1/choices/4",
-                        "votes": 0
-                    }
-                ]
-            }
 
