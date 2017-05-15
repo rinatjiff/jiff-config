@@ -75,16 +75,35 @@ Use this endpoint to generate the main config.json to drop in your jsons folder.
 
 
 
-## WIP create version [/create/version/{?name,blackstatusbar,dashboard}]
+## WIP create version [/create/version/{?name,blackstatusbar,dashboard,tabs,defaulttab,menu,menu_style,logo,rewards_center,web,background_web,displayed_name,place,video_name,has_terms,has_phone,on_boarding,personal_assessment}]
 
 Use this endpoint to create new version.
 
 ### WIP create [GET]
 
 + Parameters
-    + name (string) - version name
-    + blackstatusbar (boolean) - statusbar type
-    + dashboard (boolean) - activate home stream
+    + name (string) - version name (platform friendly)
+    + blackstatusbar (boolean, optional) - statusbar type
+        + default: true
+    + dashboard (boolean, optional) - activate home stream
+        + default: false
+    + tabs (optional) - deprecated
+    + defaulttab (optional) - first tab after recommendation
+    + menu (optional) - list of more menu items
+    + menu_style (optional) - "dark" or "light" style
+        + default: "light"
+    + logo (optional) - image name (png, jpg or svg)
+    + rewards_center(optional) - list of rewards
+    + web (optional) - wip
+    + background_web (optional) - wip
+    + displayed_name (optional) - version name (display friendly)
+    + place (number) - order
+    + video_name (optional) - intro video name
+    + has_terms (boolean, optional) - disable terms screen
+    + has_phone (boolean, optional) - disable phone capabilities
+    + on_boarding (optional) - list of slide names
+    + personal_assessment (boolean) - disable health assessment
+        +default: true
 
 + Response 200 (application/json)
 
