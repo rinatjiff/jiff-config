@@ -75,11 +75,16 @@ Use this endpoint to generate the main config.json to drop in your jsons folder.
 
 
 
-## WIP create version [/create/version]
+## WIP create version [/create/version/{?name,blackstatusbar,dashboard}]
 
 Use this endpoint to create new version.
 
 ### WIP create [GET]
+
++ Parameters
+    + name (string) - version name
+    + blackstatusbar (boolean) - statusbar type
+    + dashboard (boolean) - activate home stream
 
 + Response 200 (application/json)
 
