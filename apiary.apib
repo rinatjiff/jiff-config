@@ -164,9 +164,20 @@ Use this endpoint to create a new user.
     + sex (string, optional) - gender (f or m)
     + lp (string, optional) - custom landing page
     + onboarding_questions (array[string], optional) - array of question ids 
-    + interests (array[string], optional) - array of interests
-    + explore_types (array[string], optional) - array of explore section types
-    + explore_sections (array[string], optional) - array of explore sections (program ids list is between "")
+    + interests (array[string], optional) - list of interests
+    + explore_types (array[string], optional) - list of explore section types
+    + explore_sections (array[string], optional) - list of explore sections (program ids list is between "")
+    + rewards (array[string], optional) - list of reward ids
+    + hsa (boolean, optional) - unlock rewards by buying hsa first
+        + default: false
+    + store (array[string], optional) - list product ids
+    + credit (number, optional) - deprecated
+    + place (number, optional) - order
+    + recommended_programs (array[string], optional) - list of recommended programs
+    + enrolled_programs (array[string], optional) - list of enrolled programs
+    + additional_programs (array[string], optional) - list of additional programs
+    + emails (array[string], optional) - list of email ids
+    
     
 
 
