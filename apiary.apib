@@ -72,6 +72,25 @@ Use this endpoint to generate the main config.json to drop in your jsons folder.
         }
 
 
+## Get card types [/cardtypes]
+
+Use this endpoint to get the list of supported home stream card types.
+
+### get card types [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "program",
+                "place": 1
+            },
+            {
+                "name": "article",
+                "place": 2
+            }
+        ]
+
 
 
 
@@ -275,7 +294,7 @@ Use this endpoint to create a new home stream card.
     + description (string, optional) - description
     + icon (string, optional) - icon
     + background (string, optional) - background
-    + cardtype (string, optional) - type
+    + cardtype (string, optional) - type (check get card types)
     + articles (array[string], optional) - list of aricle ids
     + cta (array[string], optional) - list of ctas
     + month (string, optional) - event month (3 first letters of the month in uppercase)
