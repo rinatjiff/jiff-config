@@ -182,7 +182,7 @@ Use this endpoint to create a new user.
     + total (number, optional) - deprecated
     + sex (string, optional) - gender (f or m)
     + lp (string, optional) - custom landing page
-    + onboarding_questions (array[string], optional) - array of question ids 
+    + onboarding_questions (array[string], optional) - list of question ids 
     + interests (array[string], optional) - list of interests
     + explore_types (array[string], optional) - list of explore section types
     + explore_sections (array[string], optional) - list of explore sections (program ids list is between "")
@@ -281,20 +281,20 @@ Use this endpoint to create a new user.
 
 
 
-## WIP create card [/create/card/{?id,title,subtitle,description,icon,background,cardtype,articles,cta,month,day,likes,comments,time,target,epilogue,epilogue_cta,place,epilogue_target,description_dashboard,epilogue_dashboard,details_dsc,details_footer,details_target,details_title,details_cta,amount,notifications,deductible,joined,thank_you_icon}]
+## Create card [/create/card/{?id,title,subtitle,description,icon,background,cardtype,articles,cta,month,day,likes,comments,time,target,epilogue,epilogue_cta,place,epilogue_target,description_dashboard,epilogue_dashboard,details_dsc,details_footer,details_target,details_title,details_cta,amount,notifications,deductible,joined,thank_you_icon}]
 
 Use this endpoint to create a new home stream card.
 
-### WIP create [GET]
+### create [GET]
 
 + Parameters
-    + id (string) - card name (lowercase)
+    + id (string) - card name (snake_case)
     + title (string, optional) - title
     + subtitle (string, optional) - subtitle
     + description (string, optional) - description
     + icon (string, optional) - icon
     + background (string, optional) - background
-    + cardtype (string, optional) - type (check get card types)
+    + cardtype (string) - type (check get card types)
     + articles (array[string], optional) - list of aricle ids
     + cta (array[string], optional) - list of ctas
     + month (string, optional) - event month (3 first letters of the month in uppercase)
@@ -363,4 +363,46 @@ Use this endpoint to create a new home stream card.
             "joined": null,
             "thank_you_icon": null
         }
+
+## WIP Create timelines [/create/timelines/{?username,time,card,initial_points,final_points,place}]
+
+Use this endpoint to create new timelines for the home stream
+
+### WIP create [GET]
+
++ Parameters
+    + username (string) - user name (lowercase)
+    + time (number) - index (lowercase)
+    + card (string) - home stream card id
+    + initial_points (string, optional) - deprecated
+    + final_points (string, optional) - deprecated
+    + place (number, optional) - order
+    
+    
+    
+
+
++ Response 200 (application/json)
+
+        [
+            {
+                "username": "jennifer liberty",
+                "time": 0,
+                "card": "quest_schedule_screening",
+                "initial_points": 0,
+                "final_points": 0,
+                "place": 3
+            },
+            {
+                "username": "jennifer liberty",
+                "time": 0,
+                "card": "step_into_spring_start",
+                "initial_points": 0,
+                "final_points": 0,
+                "place": 4
+            }
+        ]
+
+
+
 
