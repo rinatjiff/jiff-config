@@ -48,15 +48,15 @@ Use this endpoint to generate the main config.json to drop in your jsons folder.
 
         {
             "mode": "dev",
-            "username": "rinatjiff",
+            "username": "...",
             "place": 1,
             "paths": {
                 "paths_id": "original",
                 "central": "jiff-navigator",
                 "prod": "jiff-prod",
                 "release": "release",
-                "base": "http://jiff-navigator-db.herokuapp.com/",
-                "dropbox": "https://dl.dropboxusercontent.com/",
+                "base": "...",
+                "dropbox": "...",
                 "place": 1
             },
             "versions":"...",
@@ -78,12 +78,12 @@ Use this endpoint to generate the main config.json to drop in your jsons folder.
 
 ## WIP create version [/create/version/{?name,blackstatusbar,dashboard,tabs,defaulttab,menu,menu_style,logo,rewards_center,web,background_web,displayed_name,place,video_name,has_terms,has_phone,on_boarding,personal_assessment}]
 
-Use this endpoint to create new version.
+Use this endpoint to create a new version.
 
 ### WIP create [GET]
 
 + Parameters
-    + name (string) - version name (platform friendly)
+    + name (string) - version name (snake_case)
     + blackstatusbar (boolean, optional) - statusbar type
         + default: true
     + dashboard (boolean, optional) - activate home stream
@@ -113,21 +113,21 @@ Use this endpoint to create new version.
             "blackstatusbar": true,
             "dashboard": false,
             "tabs": [
-            "stream",
-            "me",
-            "explore",
-            "rewards"
+                "stream",
+                "me",
+                "explore",
+                "rewards"
             ],
             "defaulttab": "stream",
             "menu": [
-            "home_stream",
-            "notifications",
-            "news_feed",
-            "program_catalog",
-            "settings",
-            "directory",
-            "store",
-            "help"
+                "home_stream",
+                "notifications",
+                "news_feed",
+                "program_catalog",
+                "settings",
+                "directory",
+                "store",
+                "help"
             ],
             "menu_style": "dark",
             "logo": "logo-datacore.png",
@@ -142,5 +142,108 @@ Use this endpoint to create new version.
             "on_boarding": null,
             "personal_assessment": true
         }
+
+
+## WIP create user [/create/user/{?name,maxtimelines,version,dob,feet,inch,lbs,zip,timeline,total,sex,lp,onboarding_questions,interests,explore_types,explore_sections,rewards,hsa,store,credit,place,recommended_programs,additional_programs,emails}]
+
+Use this endpoint to create a new user.
+
+### WIP create [GET]
+
++ Parameters
+    + name (string) - version name (lowercase)
+    + maxtimelines (number, optional) - max number of timelines
+    + version (string, optional) - version name user belongs to
+    + dob (number, optional) - date of birth (year/month/day)
+    + feet (number, optional) - height (.ft)
+    + inch (number, optional) - height (.in)
+    + lbs (number, optional) - weight (.lbs)
+    + zip (number, optional) - zip code
+    + timeline (number, optional) - default timeline index
+    + total (number, optional) - deprecated
+    + sex (string, optional) - gender (f or m)
+    + lp (string, optional) - custom landing page
+    + onboarding_questions (array[string], optional) - array of question ids 
+
+
++ Response 200 (application/json)
+
+        {
+            "name": "ellis stevens",
+            "maxtimelines": 3,
+            "version": "datacore",
+            "dob": "1990-04-03T00:00:00.000Z",
+            "feet": 5,
+            "inch": 9,
+            "lbs": 175,
+            "zip": 94043,
+            "timeline": 0,
+            "total": 2500,
+            "sex": "m",
+            "lp": null,
+            "onboarding_questions": null,
+            "interests": null,
+            "explore_types": [
+                "search",
+                "programs",
+                "resources",
+                "list"
+            ],
+            "explore_sections": [
+                "",
+                "",
+                "bcbs_BR,delta_dental,vsp,employee_assistance",
+                "content_center,event_center,store,newsfeed"
+            ],
+            "rewards": [
+                "pw_20",
+                "hsa_100",
+                "cycling_kit",
+                "buy_nutribullet",
+                "buy_amazon",
+                "buy_rei",
+                "buy_jiff",
+                "buy_spaweek",
+                "buy_netflix",
+                "buy_platejoy",
+                "raffle_tdf",
+                "raffle_rio",
+                "raffle_yoga",
+                "charity_MOD",
+                "charity_DWB",
+                "charity_STC",
+                "charity_TIT"
+            ],
+            "hsa": false,
+            "store": [
+                "healthkit_app",
+                "fitbit_blaze",
+                "fitbit_alta",
+                "caloryguard",
+                "garmin_vivoactive",
+                "misfit_shine",
+                "fitbit_aria",
+                "withings_activite",
+                "moves_app"
+            ],
+            "credit": 40,
+            "place": 23,
+            "recommended_programs": [
+                "get_active",
+                "hello_wallet",
+                "zipongo",
+                "sleep_soundly_generic"
+            ],
+            "enrolled_programs": [
+                "quest",
+                "hra"
+            ],
+            "additional_programs": [
+                "mequilibrium"
+            ],
+            "emails": null
+        }
+
+
 
 
