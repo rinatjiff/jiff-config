@@ -21,12 +21,14 @@ HOST: http://jiff-config-db.herokuapp.com/api
 
 We are using a Central/Develop git flow process to push changes through production where :
 
-`central https://rinatjiff@bitbucket.org/Jiff_DT/jiff-navigator.git (fetch)`
-`central https://rinatjiff@bitbucket.org/Jiff_DT/jiff-navigator.git (push)`
+`central https://{your_bitbucket_username}@bitbucket.org/Jiff_DT/jiff-navigator.git (fetch)`
 
-and 
+`central https://{your_bitbucket_username}@bitbucket.org/Jiff_DT/jiff-navigator.git (push)`
+
+And 
 
 `origin https://rinatjiff@bitbucket.org/{your_username}/jiff-navigator.git (fetch)`
+
 `origin https://rinatjiff@bitbucket.org/{your_username}/jiff-navigator.git (push)`
 
 The steps are :
@@ -36,10 +38,9 @@ The steps are :
 * Create a pull request to `central/src-develop`
 
 
+## config [/]
 
 Use this endpoint to generate the main config.json to drop in your jsons folder.
-
-## config [/]
 
 ### config [GET]
 
