@@ -186,60 +186,49 @@ Use this endpoint to create a new version.
         + default: true
     + dashboard (boolean, optional) - activate home stream
         + default: false
-    + tabs (optional) - deprecated
-    + defaulttab (optional) - first tab after recommendation
-    + menu (optional) - list of more menu items
-    + menu_style (optional) - "dark" or "light" style
+    + tabs (array[string]) - list of footer tabs
+    + defaulttab (string, optional) - first tab after recommendation
+    + menu (array[string]) - list of more menu items
+    + menu_style (string, optional) - "dark" or "light" style
         + default: "light"
-    + logo (optional) - image name (png, jpg or svg)
-    + rewards_center(optional) - list of rewards
-    + web (optional) - wip
-    + background_web (optional) - wip
-    + displayed_name (optional) - version name (display friendly)
-    + place (number,optional) - order
-    + video_name (optional) - intro video name
+    + logo (string, optional) - image name (png, jpg or svg)
+    + rewards_center(string, optional) - wip
+    + web (boolean, optional) - wip
+        + default: false
+    + background_web (string, optional) - wip
+    + displayed_name (string, optional) - version name (display friendly)
+    + place (number, optional) - order
+    + video_name (string, optional) - intro video name
     + has_terms (boolean, optional) - disable terms screen
     + has_phone (boolean, optional) - disable phone capabilities
-    + on_boarding (optional) - list of slide names
+    + on_boarding (array[string]) - list of slide names
     + personal_assessment (boolean,optional) - disable health assessment
-        +default: true
+        + default: true
 
 + Response 200 (application/json)
 
-        {
-            "name": "datacore",
+        [
+          {
+            "name": "test2",
             "blackstatusbar": true,
             "dashboard": false,
-            "tabs": [
-                "stream",
-                "me",
-                "explore",
-                "rewards"
-            ],
-            "defaulttab": "stream",
-            "menu": [
-                "home_stream",
-                "notifications",
-                "news_feed",
-                "program_catalog",
-                "settings",
-                "directory",
-                "store",
-                "help"
-            ],
-            "menu_style": "dark",
-            "logo": "logo-datacore.png",
+            "tabs": null,
+            "defaulttab": null,
+            "menu": null,
+            "menu_style": "light",
+            "logo": null,
             "rewards_center": null,
             "web": false,
             "background_web": null,
-            "displayed_name": "Life Central",
-            "place": 1,
+            "displayed_name": null,
+            "place": 58,
             "video_name": null,
             "has_terms": null,
             "has_phone": null,
             "on_boarding": null,
             "personal_assessment": true
-        }
+          }
+        ]
 
 
 ## Create user [/create/user/{?name,maxtimelines,version,dob,feet,inch,lbs,zip,timeline,total,sex,lp,onboarding_questions,interests,explore_types,explore_sections,rewards,hsa,store,credit,place,recommended_programs,enrolled_programs,additional_programs,emails}]
@@ -524,3 +513,59 @@ Use this endpoint to create a new push notification
         ]
 
 
+## Update version [/update/version/{?name,blackstatusbar,dashboard,tabs,defaulttab,menu,menu_style,logo,rewards_center,web,background_web,displayed_name,place,video_name,has_terms,has_phone,on_boarding,personal_assessment}]
+
+Use this endpoint to update a version.
+
+### update [GET]
+
++ Parameters
+    + name (string) - version name (snake_case)
+    + blackstatusbar (boolean, optional) - statusbar type
+        + default: true
+    + dashboard (boolean, optional) - activate home stream
+        + default: false
+    + tabs (array[string], optional) - list of footer tabs
+    + defaulttab (string, optional) - first tab after recommendation
+    + menu (array[string], optional) - list of more menu items
+    + menu_style (string, optional) - "dark" or "light" style
+        + default: "light"
+    + logo (string, optional) - image name (png, jpg or svg)
+    + rewards_center(string, optional) - wip
+    + web (boolean, optional) - wip
+        + default: false
+    + background_web (string, optional) - wip
+    + displayed_name (string, optional) - version name (display friendly)
+    + place (number, optional) - order
+    + video_name (string, optional) - intro video name
+    + has_terms (boolean, optional) - disable terms screen
+    + has_phone (boolean, optional) - disable phone capabilities
+    + on_boarding (array[string], optional ) - list of slide names
+    + personal_assessment (boolean, optional) - disable health assessment
+        + default: true
+
+
++ Response 200 (application/json)
+
+        [
+          {
+            "name": "test",
+            "blackstatusbar": true,
+            "dashboard": false,
+            "tabs": null,
+            "defaulttab": null,
+            "menu": null,
+            "menu_style": "light",
+            "logo": null,
+            "rewards_center": null,
+            "web": false,
+            "background_web": null,
+            "displayed_name": null,
+            "place": 58,
+            "video_name": "test.mp4",
+            "has_terms": null,
+            "has_phone": null,
+            "on_boarding": null,
+            "personal_assessment": true
+          }
+        ]
