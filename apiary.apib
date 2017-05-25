@@ -125,17 +125,23 @@ Use this endpoint to get all timelines of a specific user.
 + Response 200 (application/json)
 
         [
-            {
-                "name": "program",
-                "place": 1
-            },
-            {
-                "name": "article",
-                "place": 2
-            }
+          {
+            "username": "leo harper",
+            "time": 2,
+            "card": "premise_health_flu_shot",
+            "initial_points": 0,
+            "final_points": 0,
+            "place": 213
+          },
+          {
+            "username": "leo harper",
+            "time": 0,
+            "card": "welcome",
+            "initial_points": 0,
+            "final_points": 0,
+            "place": 213
+          }
         ]
-
-
 
 
 ## Create version [/create/version/{?name,blackstatusbar,dashboard,tabs,defaulttab,menu,menu_style,logo,rewards_center,web,background_web,displayed_name,place,video_name,has_terms,has_phone,on_boarding,personal_assessment}]
@@ -447,5 +453,44 @@ Use this endpoint to create new timelines for the home stream
         ]
 
 
+
+## Create push notification [/create/notification/{?username,time,title,description,target,place}]
+
+Use this endpoint to create a new push notification
+
+### create [GET]
+
++ Parameters
+    + username (string) - user name (lowercase)
+    + time (number) - index (lowercase)
+    + title (string, optional) - title
+    + description (string, optional) - description
+    + target (string, optional) - wip
+    + place (number, optional) - order
+    
+    
+    
+
+
++ Response 200 (application/json)
+
+        [
+            {
+                "username": "tina fey",
+                "time": 1,
+                "title": "Jiff",
+                "description": "Your biometrics results are in. Let's see how you did.",
+                "target": null,
+                "place": 8
+            },
+            {
+                "username": "tina fey",
+                "time": 2,
+                "title": "Jiff",
+                "description": "Hi, moms!  Waitlist spots are now available in the childcare center, don't forget to apply!",
+                "target": null,
+                "place": 9
+            },
+        ]
 
 
