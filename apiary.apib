@@ -113,7 +113,7 @@ Use this endpoint to get the list of supported home stream card types.
         ]
 
 
-## Get timelines [/timelines/{?username}]
+## Get user timelines [/timelines/{?username}]
 
 Use this endpoint to get all timelines of a specific user.
 
@@ -143,6 +143,36 @@ Use this endpoint to get all timelines of a specific user.
           }
         ]
 
+
+## Get user notifications [/notifications/{?username}]
+
+Use this endpoint to get all push notifications of a specific user.
+
+### get user push notifications [GET]
+
++ Parameters
+    + username (string) - user name (lowercase)
+
++ Response 200 (application/json)
+
+        [
+          {
+            "username": "leo harper",
+            "time": 2,
+            "card": "premise_health_flu_shot",
+            "initial_points": 0,
+            "final_points": 0,
+            "place": 213
+          },
+          {
+            "username": "leo harper",
+            "time": 0,
+            "card": "welcome",
+            "initial_points": 0,
+            "final_points": 0,
+            "place": 213
+          }
+        ]
 
 ## Create version [/create/version/{?name,blackstatusbar,dashboard,tabs,defaulttab,menu,menu_style,logo,rewards_center,web,background_web,displayed_name,place,video_name,has_terms,has_phone,on_boarding,personal_assessment}]
 
