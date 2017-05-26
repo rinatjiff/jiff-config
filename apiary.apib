@@ -59,7 +59,7 @@ Here are the steps:
 
 
 
-## Get config JSON [/]
+## Get config JSON [/config]
 
 Use this endpoint to generate the main config.json to drop in your jsons folder.
 
@@ -817,11 +817,11 @@ Use this endpoint to update timelines by providing a timeline id
 
 Use this endpoint to update a new push notification by providing a notification id
 
-### create [GET]
+### update [GET]
 
 + Parameters
-    + username (string) - user name (lowercase)
-    + time (number) - index (lowercase)
+    + username (string, optional) - user name (lowercase)
+    + time (number, optional) - index (lowercase)
     + title (string, optional) - title
     + description (string, optional) - description
     + target (string, optional) - wip
