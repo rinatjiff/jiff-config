@@ -688,7 +688,7 @@ Use this endpoint to update a user.
         }
 
 
-## update card [/update/card/{?id,title,subtitle,description,icon,background,cardtype,articles,cta,month,day,likes,comments,time,target,epilogue,epilogue_cta,place,epilogue_target,description_dashboard,epilogue_dashboard,details_dsc,details_footer,details_target,details_title,details_cta,amount,notifications,deductible,joined,thank_you_icon}]
+## Update card [/update/card/{?id,title,subtitle,description,icon,background,cardtype,articles,cta,month,day,likes,comments,time,target,epilogue,epilogue_cta,place,epilogue_target,description_dashboard,epilogue_dashboard,details_dsc,details_footer,details_target,details_title,details_cta,amount,notifications,deductible,joined,thank_you_icon}]
 
 Use this endpoint to update a new home stream card.
 
@@ -701,7 +701,7 @@ Use this endpoint to update a new home stream card.
     + description (string, optional) - description
     + icon (string, optional) - icon
     + background (string, optional) - background
-    + cardtype (string) - type (check get card types)
+    + cardtype (string, optional) - type (check get card types)
     + articles (array[string], optional) - list of aricle ids
     + cta (array[string], optional) - list of ctas
     + month (string, optional) - event month (3 first letters of the month in uppercase)
@@ -770,3 +770,85 @@ Use this endpoint to update a new home stream card.
             "joined": null,
             "thank_you_icon": null
         }
+
+
+## Update timelines [/update/timeline/{?username,time,card,initial_points,final_points,place,id}]
+
+Use this endpoint to update timelines by providing a timeline id
+
+### update [GET]
+
++ Parameters
+    + username (string, optional) - user name (lowercase)
+    + time (number, optional) - index (lowercase)
+    + card (string, optional) - home stream card id
+    + initial_points (string, optional) - deprecated
+    + final_points (string, optional) - deprecated
+    + place (number, optional) - order
+    + id (number) - id selector
+    
+    
+
+
++ Response 200 (application/json)
+
+        [
+            {
+                "username": "jennifer liberty",
+                "time": 0,
+                "card": "quest_schedule_screening",
+                "initial_points": 0,
+                "final_points": 0,
+                "place": 3
+            },
+            {
+                "username": "jennifer liberty",
+                "time": 0,
+                "card": "step_into_spring_start",
+                "initial_points": 0,
+                "final_points": 0,
+                "place": 4
+            }
+        ]
+
+
+
+## Update push notification [/update/notification/{?username,time,title,description,target,place,id}]
+
+Use this endpoint to update a new push notification by providing a notification id
+
+### create [GET]
+
++ Parameters
+    + username (string) - user name (lowercase)
+    + time (number) - index (lowercase)
+    + title (string, optional) - title
+    + description (string, optional) - description
+    + target (string, optional) - wip
+    + place (number, optional) - order
+    + id (number) - id selector
+    
+    
+    
+
+
++ Response 200 (application/json)
+
+        [
+            {
+                "username": "tina fey",
+                "time": 1,
+                "title": "Jiff",
+                "description": "Your biometrics results are in. Let's see how you did.",
+                "target": null,
+                "place": 8
+            },
+            {
+                "username": "tina fey",
+                "time": 2,
+                "title": "Jiff",
+                "description": "Hi, moms!  Waitlist spots are now available in the childcare center, don't forget to apply!",
+                "target": null,
+                "place": 9
+            },
+        ]
