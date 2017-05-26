@@ -569,3 +569,121 @@ Use this endpoint to update a version.
             "personal_assessment": true
           }
         ]
+
+
+
+## Update user [/update/user/{?name,maxtimelines,version,dob,feet,inch,lbs,zip,timeline,total,sex,lp,onboarding_questions,interests,explore_types,explore_sections,rewards,hsa,store,credit,place,recommended_programs,enrolled_programs,additional_programs,emails}]
+
+Use this endpoint to update a user.
+
+### update [GET]
+
++ Parameters
+    + name (string) - version name (lowercase)
+    + maxtimelines (number, optional) - max number of timelines
+    + version (string, optional) - version name user belongs to
+    + dob (number, optional) - date of birth (year/month/day)
+    + feet (number, optional) - height (.ft)
+    + inch (number, optional) - height (.in)
+    + lbs (number, optional) - weight (.lbs)
+    + zip (number, optional) - zip code
+    + timeline (number, optional) - default timeline index
+    + total (number, optional) - deprecated
+    + sex (string, optional) - gender (f or m)
+    + lp (string, optional) - custom landing page
+    + onboarding_questions (array[string], optional) - list of question ids 
+    + interests (array[string], optional) - list of interests
+    + explore_types (array[string], optional) - list of explore section types
+    + explore_sections (array[string], optional) - list of explore sections (program ids list is between "")
+    + rewards (array[string], optional) - list of reward ids
+    + hsa (boolean, optional) - unlock rewards by buying hsa first
+        + default: false
+    + store (array[string], optional) - list product ids
+    + credit (number, optional) - deprecated
+    + place (number, optional) - order
+    + recommended_programs (array[string], optional) - list of recommended programs
+    + enrolled_programs (array[string], optional) - list of enrolled programs
+    + additional_programs (array[string], optional) - list of additional programs
+    + emails (array[string], optional) - list of email ids
+    
+    
+
+
++ Response 200 (application/json)
+
+        {
+            "name": "ellis stevens",
+            "maxtimelines": 3,
+            "version": "datacore",
+            "dob": "1990-04-03T00:00:00.000Z",
+            "feet": 5,
+            "inch": 9,
+            "lbs": 175,
+            "zip": 94043,
+            "timeline": 0,
+            "total": 2500,
+            "sex": "m",
+            "lp": null,
+            "onboarding_questions": null,
+            "interests": null,
+            "explore_types": [
+                "search",
+                "programs",
+                "resources",
+                "list"
+            ],
+            "explore_sections": [
+                "",
+                "",
+                "bcbs_BR,delta_dental,vsp,employee_assistance",
+                "content_center,event_center,store,newsfeed"
+            ],
+            "rewards": [
+                "pw_20",
+                "hsa_100",
+                "cycling_kit",
+                "buy_nutribullet",
+                "buy_amazon",
+                "buy_rei",
+                "buy_jiff",
+                "buy_spaweek",
+                "buy_netflix",
+                "buy_platejoy",
+                "raffle_tdf",
+                "raffle_rio",
+                "raffle_yoga",
+                "charity_MOD",
+                "charity_DWB",
+                "charity_STC",
+                "charity_TIT"
+            ],
+            "hsa": false,
+            "store": [
+                "healthkit_app",
+                "fitbit_blaze",
+                "fitbit_alta",
+                "caloryguard",
+                "garmin_vivoactive",
+                "misfit_shine",
+                "fitbit_aria",
+                "withings_activite",
+                "moves_app"
+            ],
+            "credit": 40,
+            "place": 23,
+            "recommended_programs": [
+                "get_active",
+                "hello_wallet",
+                "zipongo",
+                "sleep_soundly_generic"
+            ],
+            "enrolled_programs": [
+                "quest",
+                "hra"
+            ],
+            "additional_programs": [
+                "mequilibrium"
+            ],
+            "emails": null
+        }
+
