@@ -687,3 +687,86 @@ Use this endpoint to update a user.
             "emails": null
         }
 
+
+## update card [/update/card/{?id,title,subtitle,description,icon,background,cardtype,articles,cta,month,day,likes,comments,time,target,epilogue,epilogue_cta,place,epilogue_target,description_dashboard,epilogue_dashboard,details_dsc,details_footer,details_target,details_title,details_cta,amount,notifications,deductible,joined,thank_you_icon}]
+
+Use this endpoint to update a new home stream card.
+
+### update [GET]
+
++ Parameters
+    + id (string) - card name (snake_case)
+    + title (string, optional) - title
+    + subtitle (string, optional) - subtitle
+    + description (string, optional) - description
+    + icon (string, optional) - icon
+    + background (string, optional) - background
+    + cardtype (string) - type (check get card types)
+    + articles (array[string], optional) - list of aricle ids
+    + cta (array[string], optional) - list of ctas
+    + month (string, optional) - event month (3 first letters of the month in uppercase)
+    + day (number, optional) - event day
+    + likes (number, optional) - event number of likes
+    + comments (number, optional) - event number of comments
+    + time (string, optional) - event time of last comment
+    + target (string, optional) - target id
+    + epilogue (string, optional) - epilogue
+    + epilogue_cta (string, optional) - epilogue cta
+    + place (number, optional) - order
+    + epilogue_target (string, optional) - epilogue target id
+    + description_dashboard (string, optional) - subline in progress
+    + epilogue_dashboard (string, optional) - subline in progress when target flow has ended
+    + details_dsc (string, optional) - wip
+    + details_footer (string, optional) - wip
+    + details_target (string, optional) - wip
+    + details_title (string, optional) - wip
+    + details_cta (string, optional) - wip
+    + amount (string, optional) - wip (vision demo)
+    + notifications (string, optional) - wip (vision demo)
+    + deductible (string, optional) - wip (vision demo)
+    + joined (string, optional) - wip (vision demo)
+    + thank_you_icon (string, optional) - wip (vision demo)
+    
+    
+    
+
+
++ Response 200 (application/json)
+
+        {
+            "id": "articles_back",
+            "title": "Recommended for You",
+            "subtitle": null,
+            "description": null,
+            "icon": null,
+            "background": null,
+            "cardtype": "articles",
+            "articles": [
+                "back_article",
+                "article_surprising_high_fiber_foods",
+                "heart_superfoods"
+            ],
+            "cta": null,
+            "month": null,
+            "day": null,
+            "likes": null,
+            "comments": null,
+            "time": null,
+            "target": null,
+            "epilogue": null,
+            "epilogue_cta": null,
+            "place": 202,
+            "epilogue_target": null,
+            "description_dashboard": null,
+            "epilogue_dashboard": null,
+            "details_dsc": null,
+            "details_footer": null,
+            "details_target": null,
+            "details_title": null,
+            "details_cta": null,
+            "amount": null,
+            "notifications": null,
+            "deductible": null,
+            "joined": null,
+            "thank_you_icon": null
+        }
