@@ -54,12 +54,13 @@ Here are the steps:
 * Create skin-{brand}
     * Include in style.less
     * Include {user}@{brand}.com in App.js
-* Create custom vendor flows
-    * Run `gulp createflow --fn flow_new_vendor`
+* Create custom vendor/program flows
+    * Run `gulp createflow --fn flow_new_vendor` where new_vendor is the new vendor/program name 
+    * Add images to `images/flow_new_vendor` where new_vendor is the new vendor/program name 
 
 
 
-## Get config JSON [/config]
+## Get config JSON [/]
 
 Use this endpoint to generate the main config.json to drop in your jsons folder.
 
@@ -817,11 +818,11 @@ Use this endpoint to update timelines by providing a timeline id
 
 Use this endpoint to update a new push notification by providing a notification id
 
-### update [GET]
+### create [GET]
 
 + Parameters
-    + username (string, optional) - user name (lowercase)
-    + time (number, optional) - index (lowercase)
+    + username (string) - user name (lowercase)
+    + time (number) - index (lowercase)
     + title (string, optional) - title
     + description (string, optional) - description
     + target (string, optional) - wip
