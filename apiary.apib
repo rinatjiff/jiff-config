@@ -530,10 +530,6 @@ Use this endpoint to create a new reward
     + details_content (string, optional) - description for details page
     + categories (array[string], optional) - categories
 
-    
-    
-    
-
 
 + Response 200 (application/json)
 
@@ -556,6 +552,54 @@ Use this endpoint to create a new reward
             },
         ]
 
+
+    
+## Create program [/create/program/{?id,name,image,description,opening,flow,color,subtitle,type,phone,email,app,website}]
+
+Use this endpoint to create a new program
+
+### create [GET]
+
++ Parameters
+    + id (string) - id (snake_case)
+    + name (string, optional) - name
+    + image (string, optional) - image
+    + description (string, optional) - description
+    + opening (string, optional) - deprecated
+    + flow (string, optional) - deprecated
+    + color (string, optional) - deprecated
+    + subtitle (string, optional) - subtitle
+    + type (string, optional) - program
+    + phone (string, optional) - phone number
+    + email (string, optional) - email
+    + app (string, optional) - app url
+    + website (string, optional) - website url
+    
+
+    
+    
+
+
++ Response 200 (application/json)
+
+         [
+          {
+            "id": "test",
+            "name": "test",
+            "image": null,
+            "description": "I'm a test",
+            "opening": null,
+            "flow": null,
+            "color": null,
+            "subtitle": null,
+            "type": "program",
+            "phone": null,
+            "email": null,
+            "app": null,
+            "website": null,
+            "place": 94
+          }
+        ]
 
 
 ## Update version [/update/version/{?name,blackstatusbar,dashboard,tabs,defaulttab,menu,menu_style,logo,rewards_center,web,background_web,displayed_name,place,video_name,has_terms,has_phone,on_boarding,personal_assessment}]
@@ -901,7 +945,7 @@ Use this endpoint to update a new push notification by providing a notification 
         
 
 
-## Update reward [/update/reward/{?id,short_title,status,points,image,details_title,details_content,categories,place}]
+## Update reward [/update/reward/{?short_title,status,points,image,details_title,details_content,categories,place,id}]
 
 Use this endpoint to update an existing reward
 
@@ -942,6 +986,55 @@ Use this endpoint to update an existing reward
                 "target": null,
                 "place": 9
             },
+        ]
+
+
+## Update program [/update/program/{?name,image,description,opening,flow,color,subtitle,type,phone,email,app,website,place,id}]
+
+Use this endpoint to update an existing program
+
+### update [GET]
+
++ Parameters
+    + name (string, optional) - name
+    + image (string, optional) - image
+    + description (string, optional) - description
+    + opening (string, optional) - deprecated
+    + flow (string, optional) - deprecated
+    + color (string, optional) - deprecated
+    + subtitle (string, optional) - subtitle
+    + type (string, optional) - program
+    + phone (string, optional) - phone number
+    + email (string, optional) - email
+    + app (string, optional) - app url
+    + website (string, optional) - website url
+    + place (number, optional) - order
+    + id (string) - id (snake_case)
+    
+
+    
+    
+
+
++ Response 200 (application/json)
+
+         [
+          {
+            "id": "test",
+            "name": "test",
+            "image": null,
+            "description": "I'm a test",
+            "opening": null,
+            "flow": null,
+            "color": null,
+            "subtitle": null,
+            "type": "program",
+            "phone": null,
+            "email": null,
+            "app": null,
+            "website": null,
+            "place": 94
+          }
         ]
 
 
