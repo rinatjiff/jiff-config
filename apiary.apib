@@ -534,22 +534,17 @@ Use this endpoint to create a new reward
 + Response 200 (application/json)
 
         [
-            {
-                "username": "tina fey",
-                "time": 1,
-                "title": "Jiff",
-                "description": "Your biometrics results are in. Let's see how you did.",
-                "target": null,
-                "place": 8
-            },
-            {
-                "username": "tina fey",
-                "time": 2,
-                "title": "Jiff",
-                "description": "Hi, moms!  Waitlist spots are now available in the childcare center, don't forget to apply!",
-                "target": null,
-                "place": 9
-            },
+              {
+                "id": "test_test",
+                "short_title": null,
+                "status": null,
+                "points": null,
+                "image": null,
+                "details_title": null,
+                "details_content": "cool's",
+                "categories": null,
+                "place": 25
+              }
         ]
 
 
@@ -583,22 +578,22 @@ Use this endpoint to create a new program
 + Response 200 (application/json)
 
          [
-          {
-            "id": "test",
-            "name": "test",
-            "image": null,
-            "description": "I'm a test",
-            "opening": null,
-            "flow": null,
-            "color": null,
-            "subtitle": null,
-            "type": "program",
-            "phone": null,
-            "email": null,
-            "app": null,
-            "website": null,
-            "place": 94
-          }
+              {
+                "id": "test",
+                "name": "test",
+                "image": null,
+                "description": "I'm a test",
+                "opening": null,
+                "flow": null,
+                "color": null,
+                "subtitle": null,
+                "type": "program",
+                "phone": null,
+                "email": null,
+                "app": null,
+                "website": null,
+                "place": 94
+              }
         ]
 
 
@@ -906,7 +901,7 @@ Use this endpoint to update timelines by providing a timeline id
 
 Use this endpoint to update a new push notification by providing a notification id
 
-### create [GET]
+### update [GET]
 
 + Parameters
     + username (string) - user name (lowercase)
@@ -970,22 +965,17 @@ Use this endpoint to update an existing reward
 + Response 200 (application/json)
 
         [
-            {
-                "username": "tina fey",
-                "time": 1,
-                "title": "Jiff",
-                "description": "Your biometrics results are in. Let's see how you did.",
-                "target": null,
-                "place": 8
-            },
-            {
-                "username": "tina fey",
-                "time": 2,
-                "title": "Jiff",
-                "description": "Hi, moms!  Waitlist spots are now available in the childcare center, don't forget to apply!",
-                "target": null,
-                "place": 9
-            },
+              {
+                "id": "test_test",
+                "short_title": null,
+                "status": null,
+                "points": null,
+                "image": null,
+                "details_title": null,
+                "details_content": "cool's",
+                "categories": null,
+                "place": 25
+              }
         ]
 
 
@@ -1019,22 +1009,22 @@ Use this endpoint to update an existing program
 + Response 200 (application/json)
 
          [
-          {
-            "id": "test",
-            "name": "test",
-            "image": null,
-            "description": "I'm a test",
-            "opening": null,
-            "flow": null,
-            "color": null,
-            "subtitle": null,
-            "type": "program",
-            "phone": null,
-            "email": null,
-            "app": null,
-            "website": null,
-            "place": 94
-          }
+              {
+                "id": "test",
+                "name": "test",
+                "image": null,
+                "description": "I'm a test",
+                "opening": null,
+                "flow": null,
+                "color": null,
+                "subtitle": null,
+                "type": "program",
+                "phone": null,
+                "email": null,
+                "app": null,
+                "website": null,
+                "place": 94
+              }
         ]
 
 
