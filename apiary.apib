@@ -901,4 +901,50 @@ Use this endpoint to update a new push notification by providing a notification 
         
 
 
+## Update reward [/update/reward/{?id,short_title,status,points,image,details_title,details_content,categories,place}]
+
+Use this endpoint to update an existing reward
+
+### update [GET]
+
++ Parameters
+    + short_title (string, optional) - short title for list view
+    + status (string, optional) - button label 
+    + points (number, optional) - value points
+    + image (string, optional) - image
+    + details_title (string, optional) - title for details page
+    + details_content (string, optional) - description for details page
+    + categories (array[string], optional) - categories
+    + place (number, optional) - order
+    + id (string) - id (snake_case)_test
+
+    
+    
+    
+
+
++ Response 200 (application/json)
+
+        [
+            {
+                "username": "tina fey",
+                "time": 1,
+                "title": "Jiff",
+                "description": "Your biometrics results are in. Let's see how you did.",
+                "target": null,
+                "place": 8
+            },
+            {
+                "username": "tina fey",
+                "time": 2,
+                "title": "Jiff",
+                "description": "Hi, moms!  Waitlist spots are now available in the childcare center, don't forget to apply!",
+                "target": null,
+                "place": 9
+            },
+        ]
+
+
+
+
     
