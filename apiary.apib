@@ -114,9 +114,9 @@ Use this endpoint to get the list of supported home stream card types.
         ]
 
 
-## Get user timelines [/timelines/{?username}]
+## Get user events [/timelines/{?username}]
 
-Use this endpoint to get all timelines of a specific user.
+Use this endpoint to get all home stream events of a specific user.
 
 ### get user timelines [GET]
 
@@ -433,9 +433,9 @@ Use this endpoint to create a new home stream card.
             "thank_you_icon": null
         }
 
-## Create timelines [/create/timelines/{?username,time,card,initial_points,final_points,place}]
+## Create user event [/create/timelines/{?username,time,card,initial_points,final_points,place}]
 
-Use this endpoint to create new timelines for the home stream
+Use this endpoint to create a new user event for the home stream
 
 ### create [GET]
 
@@ -856,9 +856,9 @@ Use this endpoint to update a new home stream card.
         }
 
 
-## Update timelines [/update/timeline/{?username,time,card,initial_points,final_points,place,id}]
+## Update event [/update/timeline/{?username,time,card,initial_points,final_points,place,id}]
 
-Use this endpoint to update timelines by providing a timeline id
+Use this endpoint to update an event by providing an event id
 
 ### update [GET]
 
