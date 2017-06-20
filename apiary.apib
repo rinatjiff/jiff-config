@@ -638,48 +638,6 @@ Use this endpoint to create a new program
           ...
         ]
 
-## update question [/update/question/{?id,question,answers,multichoice,feedback,cta,target,icon,place,qid}]
-
-Use this endpoint to create a new program
-
-### update [GET]
-
-+ Parameters
-    + id (string, optional) - id (snake_case)
-    + question (string, optional) - question details
-    + answers (array[string], optional) - list of answers
-    + multichoice (string, optional) - enable multichoice
-    + feedback (string, optional) - only for last card
-    + cta (string, optional) - only for last card 
-    + target (string, optional) - target flow
-    + icon (string, optional) - only for last card
-    + place (number, optional) - order
-    + qid (number) - question id
-    
-
-+ Response 200 (application/json)
-
-        [
-          {
-            "id": "mind_section",
-            "question": "Do you feel stressed?",
-            "answers": [
-              "Great",
-              "Good",
-              "Ok",
-              "Bad",
-              "Very Bad"
-            ],
-            "multichoice": false,
-            "feedback": false,
-            "place": 4,
-            "cta": null,
-            "target": null,
-            "icon": null,
-            "qid": 1
-          }
-        ]
-
 
 ## Update version [/update/version/{?name,blackstatusbar,dashboard,tabs,defaulttab,menu,menu_style,logo,rewards_center,web,background_web,displayed_name,place,video_name,has_terms,has_phone,on_boarding,personal_assessment}]
 
@@ -1112,6 +1070,47 @@ Use this endpoint to update an existing program
         ]
 
 
+## Update question [/update/question/{?id,question,answers,multichoice,feedback,cta,target,icon,place,qid}]
+
+Use this endpoint to create a new program
+
+### Update [GET]
+
++ Parameters
+    + id (string, optional) - id (snake_case)
+    + question (string, optional) - question details
+    + answers (array[string], optional) - list of answers
+    + multichoice (string, optional) - enable multichoice
+    + feedback (string, optional) - only for last card
+    + cta (string, optional) - only for last card 
+    + target (string, optional) - target flow
+    + icon (string, optional) - only for last card
+    + place (number, optional) - order
+    + qid (number) - question id
+    
+
++ Response 200 (application/json)
+
+        [
+          {
+            "id": "mind_section",
+            "question": "Do you feel stressed?",
+            "answers": [
+              "Great",
+              "Good",
+              "Ok",
+              "Bad",
+              "Very Bad"
+            ],
+            "multichoice": false,
+            "feedback": false,
+            "place": 4,
+            "cta": null,
+            "target": null,
+            "icon": null,
+            "qid": 1
+          }
+        ]
 
 
     
