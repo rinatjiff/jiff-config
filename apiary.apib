@@ -597,6 +597,43 @@ Use this endpoint to create a new program
         ]
 
 
+## Create question [/create/question/{?id,question,answers,multichoice,feedback,cta,target,icon}]
+
+Use this endpoint to create a new program
+
+### create [GET]
+
++ Parameters
+    + id (string) - id (snake_case)
+    + question (string, optional) - question details
+    + answers (array[string], optional) - list of answers
+    + multichoice (string, optional) - enable multichoice
+    + feedback (string, optional) - only for last card
+    + cta (string, optional) - only for last card 
+    + target (string, optional) - deprecated
+    
+
++ Response 200 (application/json)
+
+        [
+          {
+            "id": "lower_back_pain_quiz",
+            "question": "test?",
+            "answers": [
+              "ok",
+              "no"
+            ],
+            "multichoice": false,
+            "feedback": false,
+            "place": 17,
+            "cta": null,
+            "target": null,
+            "icon": null
+          },
+          ...
+        ]
+
+
 ## Update version [/update/version/{?name,blackstatusbar,dashboard,tabs,defaulttab,menu,menu_style,logo,rewards_center,web,background_web,displayed_name,place,video_name,has_terms,has_phone,on_boarding,personal_assessment}]
 
 Use this endpoint to update a version.
