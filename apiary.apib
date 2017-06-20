@@ -610,27 +610,74 @@ Use this endpoint to create a new program
     + multichoice (string, optional) - enable multichoice
     + feedback (string, optional) - only for last card
     + cta (string, optional) - only for last card 
-    + target (string, optional) - deprecated
+    + target (string, optional) - target flow
+    + icon (string, optional) - only for last card
     
 
 + Response 200 (application/json)
 
         [
           {
-            "id": "lower_back_pain_quiz",
-            "question": "test?",
+            "id": "mind_section",
+            "question": "Do you feel stressed?",
             "answers": [
-              "ok",
-              "no"
+              "Great",
+              "Good",
+              "Ok",
+              "Bad",
+              "Very Bad"
             ],
             "multichoice": false,
             "feedback": false,
-            "place": 17,
+            "place": 4,
             "cta": null,
             "target": null,
-            "icon": null
+            "icon": null,
+            "qid": 1
           },
           ...
+        ]
+
+## update question [/update/question/{?id,question,answers,multichoice,feedback,cta,target,icon,place,qid}]
+
+Use this endpoint to create a new program
+
+### update [GET]
+
++ Parameters
+    + id (string, optional) - id (snake_case)
+    + question (string, optional) - question details
+    + answers (array[string], optional) - list of answers
+    + multichoice (string, optional) - enable multichoice
+    + feedback (string, optional) - only for last card
+    + cta (string, optional) - only for last card 
+    + target (string, optional) - target flow
+    + icon (string, optional) - only for last card
+    + place (number, optional) - order
+    + qid (number) - question id
+    
+
++ Response 200 (application/json)
+
+        [
+          {
+            "id": "mind_section",
+            "question": "Do you feel stressed?",
+            "answers": [
+              "Great",
+              "Good",
+              "Ok",
+              "Bad",
+              "Very Bad"
+            ],
+            "multichoice": false,
+            "feedback": false,
+            "place": 4,
+            "cta": null,
+            "target": null,
+            "icon": null,
+            "qid": 1
+          }
         ]
 
 
