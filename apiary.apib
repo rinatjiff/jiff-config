@@ -1220,5 +1220,37 @@ Use this endpoint to duplicate a user.
         }
 
 
+## Duplicate events [/duplicate/timeline/{?name,new}]
+
+Use this endpoint to duplicate all events from an existing user to a newly created one.
+
+### duplicate [GET]
+
++ Parameters
+    + name (string) - name of the user you want to duplicate (lowercase)
+    + new (string) - new user name (lowercase)
+    
+
++ Response 200 (application/json)
+
+        [
+            {
+                "username": "jennifer liberty",
+                "time": 0,
+                "card": "quest_schedule_screening",
+                "initial_points": 0,
+                "final_points": 0,
+                "place": 3
+            },
+            {
+                "username": "jennifer liberty",
+                "time": 0,
+                "card": "step_into_spring_start",
+                "initial_points": 0,
+                "final_points": 0,
+                "place": 4
+            }
+        ]
+
 
     
