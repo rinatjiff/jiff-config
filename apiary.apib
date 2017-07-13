@@ -1130,5 +1130,95 @@ Use this endpoint to delete an event by providing an event id
           "message": "1174 was deleted"
         }
 
+## Duplicate user [/duplicate/user/{?name,new}]
+
+Use this endpoint to duplicate a user.
+
+### duplicate [GET]
+
++ Parameters
+    + name (string) - name of the user you want to duplicate (lowercase)
+    + new (string) - new user name (lowercase)
+    
+
++ Response 200 (application/json)
+
+        {
+            "name": "ellis stevens",
+            "maxtimelines": 3,
+            "version": "datacore",
+            "dob": "1990-04-03T00:00:00.000Z",
+            "feet": 5,
+            "inch": 9,
+            "lbs": 175,
+            "zip": 94043,
+            "timeline": 0,
+            "total": 2500,
+            "sex": "m",
+            "lp": null,
+            "onboarding_questions": null,
+            "interests": null,
+            "explore_types": [
+                "search",
+                "programs",
+                "resources",
+                "list"
+            ],
+            "explore_sections": [
+                "",
+                "",
+                "bcbs_BR,delta_dental,vsp,employee_assistance",
+                "content_center,event_center,store,newsfeed"
+            ],
+            "rewards": [
+                "pw_20",
+                "hsa_100",
+                "cycling_kit",
+                "buy_nutribullet",
+                "buy_amazon",
+                "buy_rei",
+                "buy_jiff",
+                "buy_spaweek",
+                "buy_netflix",
+                "buy_platejoy",
+                "raffle_tdf",
+                "raffle_rio",
+                "raffle_yoga",
+                "charity_MOD",
+                "charity_DWB",
+                "charity_STC",
+                "charity_TIT"
+            ],
+            "hsa": false,
+            "store": [
+                "healthkit_app",
+                "fitbit_blaze",
+                "fitbit_alta",
+                "caloryguard",
+                "garmin_vivoactive",
+                "misfit_shine",
+                "fitbit_aria",
+                "withings_activite",
+                "moves_app"
+            ],
+            "credit": 40,
+            "place": 23,
+            "recommended_programs": [
+                "get_active",
+                "hello_wallet",
+                "zipongo",
+                "sleep_soundly_generic"
+            ],
+            "enrolled_programs": [
+                "quest",
+                "hra"
+            ],
+            "additional_programs": [
+                "mequilibrium"
+            ],
+            "emails": null
+        }
+
+
 
     
