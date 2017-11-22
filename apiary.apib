@@ -661,27 +661,61 @@ Use this endpoint to create a new product.
 
         [
           {
-            "name": "test2",
-            "blackstatusbar": true,
-            "dashboard": false,
-            "tabs": null,
-            "defaulttab": null,
-            "menu": null,
-            "menu_style": "light",
-            "logo": null,
-            "rewards_center": null,
-            "web": false,
-            "background_web": null,
-            "displayed_name": null,
-            "place": 58,
-            "video_name": null,
-            "has_terms": null,
-            "has_phone": null,
-            "on_boarding": null,
-            "personal_assessment": true
+            "id": "test_test",
+            "short_title": null,
+            "price": null,
+            "image": null,
+            "details_title": null,
+            "details_content": null,
+            "categories": [
+              "activity",
+              "weight"
+            ],
+            "type": null,
+            "cover": null,
+            "place": 20
           }
         ]
 
+
+## Update product [/update/product/{?id,short_title,price,image,details_title,details_content,categories,type,cover,place}]
+
+Use this endpoint to update a new product.
+
+### create [GET]
+
++ Parameters
+    + id (string) - product id (snake_case)
+    + categories (array[string], optional) - activate home stream
+    + short_title (string, optional) - short title
+    + image (string, optional) - image
+    + details_title (string, optional) - details title
+    + details_content (string, optional) - details content
+    + type (string, optional) - types
+    + cover (string, optional) - cover
+    + price (number, optional) - price
+    + place (number, optional) - place
+
+
++ Response 200 (application/json)
+
+        [
+          {
+            "id": "test_test",
+            "short_title": null,
+            "price": null,
+            "image": null,
+            "details_title": null,
+            "details_content": null,
+            "categories": [
+              "activity",
+              "weight"
+            ],
+            "type": null,
+            "cover": null,
+            "place": 20
+          }
+        ]
 
 ## Update version [/update/version/{?name,blackstatusbar,dashboard,tabs,defaulttab,menu,menu_style,logo,rewards_center,web,background_web,displayed_name,place,video_name,has_terms,has_phone,on_boarding,personal_assessment}]
 
